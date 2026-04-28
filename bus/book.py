@@ -13,7 +13,13 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import tkinter as tk
 from tkinter import ttk, font, messagebox
 from PIL import Image, ImageTk
+from flask import Flask
 
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Deployment working!"
 
 
 # ─────────────────────────── EMBEDDED HTML APP ───────────────────────────────
